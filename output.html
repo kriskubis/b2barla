@@ -19,28 +19,54 @@
     <a href="#">PROFILE</a>
   </nav>
 <main>
-<h2>Go Green Survey</h2>
+<h3>Go Green Survey</h3>
 <h1>HOW DID YOU DO COMPARED TO 2018?</h1>
 
-  <button type="button" class="collapsible">Open Collapsible</button>
+  <button onclick="showGraph('energyDiv')" type="button" class="collapsible">Open Collapsible</button>
+  <div id="" class="content">
+    <p>Lorem ipsum...</p>
+  </div>
+
+  <button onclick="showGraph('waterDiv')" type="button" class="collapsible">Open Collapsible</button>
   <div class="content">
     <p>Lorem ipsum...</p>
   </div>
 
-  <button type="button" class="collapsible">Open Collapsible</button>
+  <button onclick="showGraph('feedDiv')" type="button" class="collapsible">Open Collapsible</button>
   <div class="content">
     <p>Lorem ipsum...</p>
   </div>
 
-  <button type="button" class="collapsible">Open Collapsible</button>
+  <button onclick="showGraph('wildDiv')" type="button" class="collapsible">Open Collapsible</button>
   <div class="content">
     <p>Lorem ipsum...</p>
   </div>
 
-  <button type="button" class="collapsible">Open Collapsible</button>
-  <div class="content">
-    <p>Lorem ipsum...</p>
+
+  <div  id="energyDiv" class="graph">
+  <h2>Fuel & Electricity</h2>
+  <canvas id="energy"></canvas>
+    </div>
+
+    <div  id="waterDiv"  class="graph">
+  <h2>Water usage</h2>
+  <canvas id="water"></canvas>
   </div>
+
+  <div id="feedDiv" class="graph">
+  <h2>Feed</h2>
+  <canvas id="feed"></canvas>
+    </div>
+
+    <div id="wildDiv" class="graph">
+  <h2>Foliage & Wildlife</h2>
+  <canvas id="wild"></canvas>
+      </div>
+
+      <div id="ecologyDiv" class="graph">
+  <h2>Ecology</h2>
+  <canvas id="ecology"></canvas>
+    </div>
 
   <h1>HOW DID YOU DO
 COMPARED TO PREVIOUS YEAR?</h1>
@@ -51,8 +77,13 @@ COMPARED TO PREVIOUS YEAR?</h1>
 
 
 
-<h3>CONTACT US: 20 30 40 50</h3>
+<h2>CONTACT US: 20 30 40 50</h2>
 </main>
-  <script src="js/main.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<!-- load firebase config -->
+<script src="js/script.js"></script>
+
 </body>
 </html>
