@@ -1,126 +1,478 @@
-/* Load Arla Fonts */
-/* Arla Bold Font Face */
-@font-face {
-  font-family: "Arla";
-  src: url("../fonts/arlaifbd.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/arlaifbd.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */
-    url("../fonts/arlaifbd.otf") format("opentype"),
-    /* Open Type Font */
-    url("../fonts/arlaifbd.svg") format("svg"),
-    /* Legacy iOS */
-    url("../fonts/arlaifbd.ttf") format("truetype"),
-    /* Safari, Android, iOS */
-    url("../fonts/arlaifbd.woff") format("woff"),
-    /* Modern Browsers */
-    url("../fonts/arlaifbd.woff2") format("woff2");
-  /* Modern Browsers */
-  font-weight: 700;
-  font-style: normal;
+#background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -9999;
 }
 
-/* Arla Normal Font Face */
-@font-face {
-  font-family: "Arla";
-  src: url("../fonts/arlaifrg.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/arlaifrg.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */
-    url("../fonts/arlaifrg.otf") format("opentype"),
-    /* Open Type Font */
-    url("../fonts/arlaifrg.svg") format("svg"),
-    /* Legacy iOS */
-    url("../fonts/arlaifrg.ttf") format("truetype"),
-    /* Safari, Android, iOS */
-    url("../fonts/arlaifrg.woff") format("woff"),
-    /* Modern Browsers */
-    url("../fonts/arlaifrg.woff2") format("woff2");
-  /* Modern Browsers */
-  font-weight: 400;
-  font-style: normal;
+
+body{
+background-color: #1F1F1F;
+margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 4%;
+font-family: 'Istok Web', sans-serif;
+font-size: 20px;
+ letter-spacing: 1px;
+ color: #909090;
 }
 
-/* Arla Light Font Face */
-@font-face {
-  font-family: "Arla";
-  src: url("../fonts/arlaiflt.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/arlaiflt.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */
-    url("../fonts/arlaiflt.otf") format("opentype"),
-    /* Open Type Font */
-    url("../fonts/arlaiflt.svg") format("svg"),
-    /* Legacy iOS */
-    url("../fonts/arlaiflt.ttf") format("truetype"),
-    /* Safari, Android, iOS */
-    url("../fonts/arlaiflt.woff") format("woff"),
-    /* Modern Browsers */
-    url("../fonts/arlaiflt.woff2") format("woff2");
-  /* Modern Browsers */
-  font-weight: 300;
-  font-style: normal;
+.text{
+  letter-spacing: 2px;
+  line-height: 35px;
 }
 
-/* Using the fonts */
-html, body {
-  font-family: 'Arla', Helvetica, Arial, sans-serif;
-  font-size: 24px;
+h2{
   color: white;
-  background-color: #363E42;
+  font-weight: bold;
+  font-size: 5em;
+  text-align: center;
+
 }
 
-.bold {
-  font-weight: 700;
+h3{
+  font-size: 2.5em;
+  color: white;
+  margin-bottom: 0%;
 }
 
-.normal {
-  font-weight: 400;
+h4{
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em;
+  color: #BEBEBE;
+  letter-spacing: 6px;
 }
 
-.light {
-  font-weight: 300;
+h5{
+  color: white;
+  font-weight: bold;
+  font-size: 4em;
+  margin-bottom: 0;
+}
+
+.logo{
+  text-align: center;
+}
+.logo img{
+  width: 60%;
+  padding-top: 5%;
+}
+
+.profile{
+  text-align: center;
+  padding-top: 10%;
+}
+
+.profile img{
+  width: 60%;
+}
+
+.intro{
+  padding-top: 5%;
+  margin: 0 auto;
+}
+
+.intro h2{
+  margin-bottom: 0;
+  text-align: left;
+}
+
+
+
+#skills{
+  list-style: none;
+  padding-inline-start: 0px;
+
+}
+#skills li:nth-child(odd){
+  font-size: 1.5em;
+  margin-bottom: 1%;
+  color: white;
+}
+
+#skills li:nth-child(even){
+  margin-bottom: 2%;
+}
+
+.icons{
+  padding-top: 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-row1{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 15%;
+}
+.icon-row2{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 15%;
+}
+.icon-row3{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 15%;
+}
+
+.experience p{
+  padding-bottom: 5%;
+}
+
+.experience-image{
+  margin: 0 auto;
+
+}
+
+#homePage span{
+  color: white;
+  font-weight: bold;
+}
+
+#homePage{
+    margin-bottom: 40%;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+.headline{
+  text-align: center;
+}
+
+.works{
+  text-align: center;
+}
+
+.work-box1, .work-box2, .work-box3, .work-box4{
+  margin-bottom: 10%;
+}
+
+
+.works a:hover{
+  cursor: pointer;
+}
+
+
+.works img{
+width: 60%;
+}
+
+#worksPage{
+    margin-bottom: 30%;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+.contact p{
+  margin: 0 auto;
+  font-size: 3em;
+  letter-spacing: 4px;
+  line-height: 100px;
+  margin-bottom: 5%;
+}
+
+.contact a{
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+
+#linkedin{
+  display: flex;
+  justify-content: center;
+}
+#linkedin img{
+  margin-top: 10%;
+  width: 40%;
+}
+
+/* ------------Project Pages-------------------------------------------------------------------------- */
+
+.project-img{
+  text-align: center;
+}
+
+
+.project-picture{
+  width: 60%;
+}
+
+.client-shawarma{
+  color: #a56b38;
+  font-weight: bold;
+}
+
+.client-lavazza{
+  color: #004990;
+  font-weight: bold;
+}
+
+.client-tdd{
+  color: #9D0000;
+  font-weight: bold;
+}
+
+.client-piggy{
+  color: #77BCFF;
+  font-weight: bold;
+}
+
+.project-link{
+  text-align:center;
+  margin: 5% auto;
+}
+
+.project-link a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.project-pics{
+  text-align: center;
+  padding-top: 5%;
+}
+
+.mobile-pics img{
+  width:80%;
+}
+
+.project-pics img{
+    margin-bottom: 2%;
+}
+
+#shawarmaPage{
+  margin-bottom: 35%;
+}
+
+#lavazzaPage{
+  margin-bottom: 35%;
+}
+
+#tddPage{
+  margin-bottom: 34%;
+}
+
+#piggybankPage{
+  margin-bottom: 33%;
+}
+
+/* -------Navigation------------------------------------------------------------------------------------------- */
+
+
+nav{
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+display: flex;
+justify-content:space-around;
+align-items: flex-start;
+background: rgba(30, 30, 30, 0.91);
+backdrop-filter: blur(14px);
+
 }
 
 nav a{
-  text-decoration: none;
-  color: #707070;
-  font-weight: 700;
-}
-
-.sidenote{
-  font-style: italic;
-}
-
-input{
-  border-radius: 4px;
-  border: 0px;
-  height: 2%;
+    text-decoration: none;
+    color: white;
 }
 
 
-/* Style the button that is used to open and close the collapsible content */
-.collapsible {
-  background-color: #5A676E;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
+
+.nav-box1:hover{
+   transform: scale(1.1);
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  background-color: #ccc;
+.nav-box2:hover{
+   transform: scale(1.1);
 }
 
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #5A676E;
+.nav-box3:hover{
+   transform: scale(1.1);
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* -------Media Querries-------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+  body{
+    font-size: 30px;
+  }
+
+  p{
+    line-height: 20px;
+  }
+.box1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.profile{
+  display: flex;
+
+  align-items: center;
+  padding-left: 8%;
+}
+
+h2{
+  font-size: 2em;
+}
+
+.edu{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.skill{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.experience h3{
+  text-align: center;
+  font-size: 1.5em;
+}
+.flex-experience{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.left, .right{
+  width: 47%;
+}
+
+nav a{
+  font-size: 0.8em;
+}
+
+#homePage{
+  margin-bottom: 20%;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+.works{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.works div{
+  flex-basis: 50%;
+}
+.works img{
+  width:80%;
+}
+
+#worksPage{
+  margin-bottom: 25%;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+.contact{
+  display: flex;
+justify-content: space-around;
+}
+.contact p{
+  font-size: 1.1em;
+  line-height: 50px;
+}
+
+.contact a{
+  font-size: 1.5em;
+  line-height: 60px;
+}
+
+#contactPage{
+  margin-bottom: 0%;
+}
+
+/* --------Project page---------------------------------------------------------------------------------- */
+
+.project-img img{
+  width: 50%;
+}
+ .headline{
+   font-size: 0.8em;
+ }
+
+
+.project-descp{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.techn{
+  font-size: 1.5em;
+}
+
+.project-descp p{
+  font-size: 1.2em;
+    line-height: 40px;
+}
+
+.mobile-pics{
+  display: flex;
+  justify-content: space-around;
+}
+
+.mobile-pics img{
+  width: 90%;
+}
+
+#piggybankPage{
+  margin-bottom:30%;
+}
+
+#tddPage{
+  margin-bottom:30%;
+}
+
+#tddPage{
+  margin-bottom:30%;
+}
+
+/* --------Navigation---------------------------------------------------------------------------------- */
+nav a{
+    font-size: 0.5em;
+}
+
+}
+
+@media only screen and (min-width: 1280px){
+  body{
+    font-size: 15px;
+
+  }
+
+
+  .logo img{
+    width: 25%;
+    padding-top:3%;
+
+  }
+
+  .profile{
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro p{
+    width: 90%;
+  }
+
+  .edu{
+    padding-top: 8%;
+  }
 }
