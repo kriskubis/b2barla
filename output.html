@@ -1,89 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Arla Go Green</title>
+  <title>Survey Output</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-  <img src="img/logo.png" alt="">
-  <nav>
-    <a href="#">CONTACT</a>
-    <a href="#">LOG OUT</a>
-    <a href="#">FRONTPAGE</a>
-    <a href="#">SURVEY</a>
-    <a href="#">SCOREBOARD</a>
-    <a href="#">MY HISTORY</a>
-    <a href="#">PROFILE</a>
-  </nav>
-<main>
-<h3>Go Green Survey</h3>
-<h1>HOW DID YOU DO COMPARED TO 2018?</h1>
-
-  <button onclick="showGraph('energyDiv')" type="button" class="collapsible">Open Collapsible</button>
-  <div id="" class="content">
-    <p>Lorem ipsum...</p>
-  </div>
-
-  <button onclick="showGraph('waterDiv')" type="button" class="collapsible">Open Collapsible</button>
-  <div class="content">
-    <p>Lorem ipsum...</p>
-  </div>
-
-  <button onclick="showGraph('feedDiv')" type="button" class="collapsible">Open Collapsible</button>
-  <div class="content">
-    <p>Lorem ipsum...</p>
-  </div>
-
-  <button onclick="showGraph('wildDiv')" type="button" class="collapsible">Open Collapsible</button>
-  <div class="content">
-    <p>Lorem ipsum...</p>
-  </div>
-
-
-  <div  id="energyDiv" class="graph">
-  <h2>Fuel & Electricity</h2>
-  <canvas id="energy"></canvas>
-    </div>
-
-    <div  id="waterDiv"  class="graph">
-  <h2>Water usage</h2>
-  <canvas id="water"></canvas>
-  </div>
-
-  <div id="feedDiv" class="graph">
-  <h2>Feed</h2>
-  <canvas id="feed"></canvas>
-    </div>
-
-    <div id="wildDiv" class="graph">
-  <h2>Foliage & Wildlife</h2>
-  <canvas id="wild"></canvas>
+  <header>
+    <nav>
+      <div class="container">
+        <img src="img/logo.png" id="logo" alt="Arla Logo">
       </div>
+      <div class="nav-row-upper">
+        <a href="#">CONTACT</a>
+        <a href="#">LOG OUT</a>
+      </div>
+      <div class="nav-lower-left">
+        <a href="#">FRONTPAGE</a>
+        <a href="index.html">SURVEY</a>
+        <a href="#">SCOREBOARD</a>
+      </div>
+      <div class="nav-lower-right">
+        <a href="#">MY HISTORY</a>
+        <a href="#">PROFILE</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="left-container left-container-mobile">
+      <div class="wrapper">
+        <div class="row-questions categories">
+          <h3>Go Green Survey</h3>
+          <h1>HOW DID YOU DO COMPARED TO 2018?</h1>
 
-      <div id="ecologyDiv" class="graph">
-  <h2>Ecology</h2>
-  <canvas id="ecology"></canvas>
+          <article class="dropdown">
+            <button onclick="showGraph('energyDiv')" type="button" class="collapsible">FUEL & ELECTRICITY</button>
+            <div id="" class="content">
+              <p>Your farm can produce renewable energy through solar panels, biogas or wind turbines.</p>
+            </div>
+          </article>
+
+          <article class="dropdown">
+            <button onclick="showGraph('waterDiv')" type="button" class="collapsible">WATER USAGE</button>
+            <div class="content">
+              <p>Carbon sequestration (capturing and storing carbon in the soil) can increase, particularly when growing grass and using manure.</p>
+            </div>
+          </article>
+
+          <article class="dropdown">
+            <button onclick="showGraph('feedDiv')" type="button" class="collapsible">FEED</button>
+            <div class="content">
+              <p>Efficient feed production ensures that there is just the right amount of nutrients to grow the crops and it minimizes the nutrients lost during storage, handling and usage in the fields. This not only reduces the climate impact but
+                also improves profitability on your farm.</p>
+            </div>
+          </article>
+
+          <article class="dropdown">
+            <button onclick="showGraph('wildDiv')" type="button" class="collapsible">FOLIAGE & WILDLIFE</button>
+            <div class="content">
+              <p>You can plant more trees, bushes, hedges and flowers on your land, which will not only help absorb CO2 but also improve biodiversity.</p>
+            </div>
+          </article>
+
+          <article class="dropdown">
+            <button onclick="showGraph('ecoPercentage')" type="button" class="collapsible">ECOLOGY</button>
+            <div class="content">
+              <p>You can plant more trees, bushes, hedges and flowers on your land, which will not only help absorb CO2 but also improve biodiversity.</p>
+            </div>
+          </article>
+
+
+          <div id="energyDiv" class="graph">
+            <h2>Fuel & Electricity</h2>
+            <canvas id="energy"></canvas>
+          </div>
+
+          <div id="waterDiv" class="graph">
+            <h2>Water usage</h2>
+            <canvas id="water"></canvas>
+          </div>
+
+          <div id="feedDiv" class="graph">
+            <h2>Feed</h2>
+            <canvas id="feed"></canvas>
+          </div>
+
+          <div id="wildDiv" class="graph">
+            <h2>Foliage & Wildlife</h2>
+            <canvas id="wild"></canvas>
+          </div>
+
+          <div id="ecologyDiv" class="graph">
+            <h2>Ecology</h2>
+            <canvas id="ecology"></canvas>
+          </div>
+          <div class="nudge-category output-nudge">
+          <p>PLEASE CHOOSE A CATEGORY</p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-container-graph">
+      <div class="wrapper">
+        <h1>HOW DID YOU DO <br>
+          COMPARED TO PREVIOUS YEAR?</h1>
+      </div>
     </div>
 
-  <h1>HOW DID YOU DO
-COMPARED TO PREVIOUS YEAR?</h1>
-<h2>YEARLY CO2 EMISSION</h2>
-<img src="img/graph.png" alt="">
+  </main>
+  <footer>
+    <h2>CONTACT US: 20 30 40 50</h2>
+  </footer>
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  <!-- load firebase config -->
+  <script src="js/script.js"></script>
 
-
-
-
-
-<h2>CONTACT US: 20 30 40 50</h2>
-</main>
-<script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-<!-- load firebase config -->
-<script src="js/script.js"></script>
-
+  </script>
 </body>
+
 </html>

@@ -8,47 +8,75 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <img src="img/logo.png" alt="">
-  <nav>
-    <a href="#">CONTACT</a>
-    <a href="#">LOG OUT</a>
-    <a href="#">FRONTPAGE</a>
-    <a href="#">SURVEY</a>
-    <a href="#">SCOREBOARD</a>
-    <a href="#">MY HISTORY</a>
-    <a href="#">PROFILE</a>
-  </nav>
+  <header>
+    <nav>
+      <div class="container">
+      <img src="img/logo.png" id="logo" alt="Arla Logo">
+    </div>
+      <div class="nav-row-upper">
+      <a href="#">CONTACT</a>
+      <a href="#">LOG OUT</a>
+    </div>
+    <div class="nav-lower-left">
+      <a href="#">FRONTPAGE</a>
+      <a href="#">SURVEY</a>
+      <a href="#">SCOREBOARD</a>
+    </div>
+    <div class="nav-lower-right">
+      <a href="#">MY HISTORY</a>
+      <a href="#">PROFILE</a>
+    </div>
+    </nav>
+  </header>
 <main>
+<div class="left-container">
+<div class="wrapper">
+  <div class="row-questions">
 <h3>Go Green Survey 2019</h3>
 <h1>FUEL & ELECTRICITY</h1>
 
-<p class="question">How much gas did you use in 2019?</p>
-<p class="sidenote">Include all gas from tractors in liters.</p>
-
-<p class="question">How much water did you use in 2019?</p>
-<p class="sidenote">Include all water from production in liters.</p>
-
-<p class="question">How much gas did you use on heating in 2019?</p>
-<p class="sidenote">Include gas for heating stables, storage units...</p>
-
-<p class="question">How much energy did your windmills generate?</p>
-<p class="sidenote">Enter the value in kilo watts.</p>
-
+<article>
 <input id="gasUsage" type="text" name="" value="">
+<h5 class="question">How much gas did you use in 2019?</h5>
+<p class="sidenote">Include all gas from tractors in liters.</p>
+</article>
+
+<article>
 <input  id="inputA" type="text" name="" value="">
+<h5 class="question">How much water did you use in 2019?</h5>
+<p class="sidenote">Include all water from production in liters.</p>
+</article>
+
+<article>
 <input   id="inputB" type="text" name="" value="">
+<h5 class="question">How much gas did you use on heating in 2019?</h5>
+<p class="sidenote">Include gas for heating stables, storage units...</p>
+</article>
+
+<article>
 <input  id="inputC" type="text" name="" value="">
-
+<h5 class="question">How much energy did your windmills generate?</h5>
+<p class="sidenote">Enter the value in kilo watts.</p>
+</article>
+</div>
+<div class="row-options">
 <p class="nudge">Good job, only five pages to go!</p>
+<div id="icons">
+<a href="#"><img class="desktop-img" src="img/back.png"><img class="phone-img" src="img/arrow-left.png"></a>
+<a href="#" onclick='upload()'><img class="desktop-img" src="img/save-exit-desktop.png"><img class="phone-img" src="img/save-exit.png"></a>
+<a href="output.html" onclick='upload()'><img class="desktop-img" src="img/next.png"><img class="phone-img" src="img/arrow-right.png"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="right-container">
+<img src="img/progress.png" id="progress-bar" alt="Progress bar">
+</div>
 
-<button type="button" name="button">BACK</button>
-<button type="button" name="button"><a href="output.html">SAVE AND EXIT</a></button>
-<button type="button" name="button" onclick="upload()"><a href="#">NEXT</a></button>
-
-<img src="img/progress.png" alt="">
-
-<h2>CONTACT US: 20 30 40 50</h2>
 </main>
+<footer>
+  <h2>CONTACT US: 20 30 40 50</h2>
+</footer>
 <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
