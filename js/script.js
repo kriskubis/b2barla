@@ -43,17 +43,17 @@ farmRef.orderBy("year").onSnapshot(function(snapshotData) {
 
 
 
-function upload(){
+function upload() {
   let gasUsage = document.querySelector("#gasUsage").value;
   let inputA = document.querySelector("#inputA").value;
   let inputB = document.querySelector("#inputB").value;
   let inputC = document.querySelector("#inputC").value;
 
-  db.collection("sustainabilityData").doc("birkely").update ({
+  db.collection("sustainabilityData").doc("birkely").update({
     fuelAndElectricity: gasUsage,
-    inputA:inputA,
+    inputA: inputA,
     inputB: inputB,
-    inputC:inputC,
+    inputC: inputC,
     ecoPercentage: 66,
     fWInitiatives: 7,
     farm: "DK1-north",
@@ -87,27 +87,42 @@ function appendFuelAndElectricity(sustainabilityData) {
         data: fuelAndElectricity,
         label: 'CO2 emission (tons)',
         fill: false,
-        borderColor: "#e755ba",
-        backgroundColor: "#e755ba",
-        pointBackgroundColor: "#55bae7",
-        pointBorderColor: "#55bae7",
-        pointHoverBackgroundColor: "#55bae7",
-        pointHoverBorderColor: "#55bae7",
+        borderColor: "#ffffff",
+        backgroundColor: "#ffffff",
+        pointBackgroundColor: "#ffffff",
+        pointBorderColor: "#ffffff",
+        pointHoverBackgroundColor: "#ffffff",
+        pointHoverBorderColor: "#ffffff",
       }],
       labels: years
     },
     options: {
+      legend: {
+        labels: {
+          fontColor: "white",
+          fontSize: 18
+        }
+      },
       scales: {
         yAxes: [{
           ticks: {
-            min: (Math.min(...fuelAndElectricity) - 5),
-            max: (Math.max(...fuelAndElectricity) + 1)
+            max: (Math.max(...fuelAndElectricity) + 1),
+            fontColor: "white",
+            beginAtZero: true
+          }
+        }],
+        xAxes: [{
+          ticks: {
+            fontColor: "white",
           }
         }]
       }
     }
   });
 }
+
+
+
 
 // Water usage
 function appendWater(sustainabilityData) {
@@ -129,21 +144,33 @@ function appendWater(sustainabilityData) {
         data: water,
         label: 'Amount in cubic meters (1000 litres)',
         fill: false,
-        borderColor: "#e755ba",
-        backgroundColor: "#e755ba",
-        pointBackgroundColor: "#55bae7",
-        pointBorderColor: "#55bae7",
-        pointHoverBackgroundColor: "#55bae7",
-        pointHoverBorderColor: "#55bae7",
+        borderColor: "#ffffff",
+        backgroundColor: "#ffffff",
+        pointBackgroundColor: "#ffffff",
+        pointBorderColor: "#ffffff",
+        pointHoverBackgroundColor: "#ffffff",
+        pointHoverBorderColor: "#ffffff",
       }],
       labels: years
     },
     options: {
+      legend: {
+        labels: {
+          fontColor: "white",
+          fontSize: 18
+        }
+      },
       scales: {
         yAxes: [{
           ticks: {
-            min: (Math.min(...water) - 100),
-            max: (Math.max(...water) + 100)
+            max: (Math.max(...water) + 1),
+            fontColor: "white",
+            beginAtZero: true
+          }
+        }],
+        xAxes: [{
+          ticks: {
+            fontColor: "white",
           }
         }]
       }
@@ -171,21 +198,33 @@ function appendFeed(sustainabilityData) {
         data: feed,
         label: 'Dry feed usage (tons)',
         fill: false,
-        borderColor: "#e755ba",
-        backgroundColor: "#e755ba",
-        pointBackgroundColor: "#55bae7",
-        pointBorderColor: "#55bae7",
-        pointHoverBackgroundColor: "#55bae7",
-        pointHoverBorderColor: "#55bae7",
+        borderColor: "#ffffff",
+        backgroundColor: "#ffffff",
+        pointBackgroundColor: "#ffffff",
+        pointBorderColor: "#ffffff",
+        pointHoverBackgroundColor: "#ffffff",
+        pointHoverBorderColor: "#ffffff",
       }],
       labels: years
     },
     options: {
+      legend: {
+        labels: {
+          fontColor: "white",
+          fontSize: 18
+        }
+      },
       scales: {
         yAxes: [{
           ticks: {
-            min: (Math.min(...feed) - 100),
-            max: (Math.max(...feed) + 100)
+            max: (Math.max(...feed) + 1),
+            fontColor: "white",
+            beginAtZero: true
+          }
+        }],
+        xAxes: [{
+          ticks: {
+            fontColor: "white",
           }
         }]
       }
@@ -213,21 +252,33 @@ function appendFoliageAndWildlife(sustainabilityData) {
         data: fWInitiatives,
         label: 'Number of initiatives',
         fill: false,
-        borderColor: "#e755ba",
-        backgroundColor: "#e755ba",
-        pointBackgroundColor: "#55bae7",
-        pointBorderColor: "#55bae7",
-        pointHoverBackgroundColor: "#55bae7",
-        pointHoverBorderColor: "#55bae7",
+        borderColor: "#ffffff",
+        backgroundColor: "#ffffff",
+        pointBackgroundColor: "#ffffff",
+        pointBorderColor: "#ffffff",
+        pointHoverBackgroundColor: "#ffffff",
+        pointHoverBorderColor: "#ffffff",
       }],
       labels: years
     },
     options: {
+      legend: {
+        labels: {
+          fontColor: "white",
+          fontSize: 18
+        }
+      },
       scales: {
         yAxes: [{
           ticks: {
-            min: (Math.min(...fWInitiatives) - 2),
-            max: (Math.max(...fWInitiatives) + 1)
+            max: (Math.max(...fWInitiatives) + 1),
+            fontColor: "white",
+            beginAtZero: true
+          }
+        }],
+        xAxes: [{
+          ticks: {
+            fontColor: "white",
           }
         }]
       }
@@ -255,21 +306,33 @@ function appendEcology(sustainabilityData) {
         data: eco,
         label: 'Percentage of ecological crops',
         fill: false,
-        borderColor: "#e755ba",
-        backgroundColor: "#e755ba",
-        pointBackgroundColor: "#55bae7",
-        pointBorderColor: "#55bae7",
-        pointHoverBackgroundColor: "#55bae7",
-        pointHoverBorderColor: "#55bae7",
+        borderColor: "#ffffff",
+        backgroundColor: "#ffffff",
+        pointBackgroundColor: "#ffffff",
+        pointBorderColor: "#ffffff",
+        pointHoverBackgroundColor: "#ffffff",
+        pointHoverBorderColor: "#ffffff",
       }],
       labels: years
     },
     options: {
+      legend: {
+        labels: {
+          fontColor: "white",
+          fontSize: 18
+        }
+      },
       scales: {
         yAxes: [{
           ticks: {
-            min: (Math.min(...eco) - 2),
-            max: (Math.max(...eco) + 1)
+            max: (Math.max(...eco) + 1),
+            fontColor: "white",
+            beginAtZero: true
+          }
+        }],
+        xAxes: [{
+          ticks: {
+            fontColor: "white",
           }
         }]
       }
@@ -278,45 +341,40 @@ function appendEcology(sustainabilityData) {
 }
 
 hideGraphs();
-function hideGraphs(){
+
+function hideGraphs() {
   let graphs = document.querySelectorAll(".graph");
-  for(let graph of graphs){
+  for (let graph of graphs) {
     graph.style.display = "none";
   }
 }
 
-function showGraph(graphId){
+function showGraph(graphId) {
   hideGraphs();
-  collapse();
+  collapseAll();
   console.log(graphId);
-  document.getElementById(graphId).style.display="block";
-  document.querySelector(`#${graphId} .content`).style.display="block";
+  document.getElementById(graphId).style.display = "block";
 }
 
+let elements = document.getElementsByClassName("collapsible");
+for (let element of elements) {
+  element.addEventListener("click", function() {
+    let content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      this.classList.remove("active");
+      content.style.display = "none";
+    } else {
+      this.classList.add("active");
+      content.style.display = "block";
+    }
+  });
+}
 
-//
-// let coll = document.getElementsByClassName("collapsible");
-// let i;
-//
-// for (i = 0; i < coll.length; i++) {
-//   coll[i].addEventListener("click", function() {
-//     this.classList.toggle("active");
-//     let content = this.nextElementSibling;
-//     if (content.style.display === "block") {
-//       content.style.display = "none";
-//       hideGraphs();
-//     } else {
-//
-//       content.style.display = "block";
-//
-//     }
-//   });
-// }
-
-function collapse(){
-  let elements = document.getElementsByClassName("content");
-  for (let element of elements){
-    element.style.display = "none";
+function collapseAll() {
+  let elements = document.getElementsByClassName("collapsible");
+  for (let element of elements) {
+    element.classList.remove("active");
+    element.nextElementSibling.style.display = "none";
   }
 
 }
